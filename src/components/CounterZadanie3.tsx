@@ -9,7 +9,7 @@ type CounterProps = {
   title: string
 }
 
-enum Buttons {
+export enum ButtonText {
   Increment = '+',
   Decrement = '-',
   Reset = 'reset'
@@ -41,10 +41,9 @@ export default class CounterZadanie3 extends Component<CounterProps, CounterStat
         <div>
           Counter: {this.state.count}
         </div>
-        <ButtonZadanie3 />
-        <button onClick={this.handleIncrement}>{Buttons.Increment}</button>
-        <button onClick={this.handleDecrement}>{Buttons.Decrement}</button>
-        <button onClick={this.handleReset}>{Buttons.Reset}</button>
+        <ButtonZadanie3 text={ButtonText.Increment} handleClick={this.handleIncrement} />
+        <ButtonZadanie3 text={ButtonText.Decrement} handleClick={this.handleDecrement} />
+        <ButtonZadanie3 text={ButtonText.Reset} handleClick={this.handleReset} />
       </div>
     )
   }

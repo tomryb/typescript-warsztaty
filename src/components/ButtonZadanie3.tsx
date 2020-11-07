@@ -1,11 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { ButtonText } from './CounterZadanie3'
 
-export default class ButtonZadanie3 extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+type ButtonProps = {
+  text: ButtonText,
+  handleClick: () => void;
+}
+
+export default function ButtonZadanie3({ text, handleClick }: ButtonProps) {
+  return (
+    <div>
+      <button onClick={handleClick}>{text}</button>
+    </div>
+  )
 }
