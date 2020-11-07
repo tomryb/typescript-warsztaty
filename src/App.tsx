@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/HeaderZadanie2';
 
 function App() {
   // const add = (a: number, b: number) => a + b //1 przykład
@@ -15,10 +16,12 @@ function App() {
   //   return result
   // }
 
-
   return (
     <div className="App">
       {/* {add(5, 5, 5)} */}
+
+      {/* zadanie2 */}
+      <Header title={"Tytuł"} subtitle={"Podtytuł"} />
     </div>
   );
 }
