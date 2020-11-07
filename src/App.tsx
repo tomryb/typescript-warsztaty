@@ -1,5 +1,6 @@
 import React from 'react';
 import Counter2Zadanie4 from './components/Counter2Zadanie4';
+import Counter2Zadanie5 from './components/Counter2Zadanie5';
 import CounterZadanie3 from './components/CounterZadanie3';
 import Header from './components/HeaderZadanie2';
 import PostListZadanie4 from './components/PostListZadanie4';
@@ -41,6 +42,10 @@ function App() {
 
       <Counter2Zadanie4 title={"elo"}/>
       <PostListZadanie4/>
+
+      {/* zadanie5 */}
+
+      <Counter2Zadanie5 title={'elo ponownie'}/>
     </div>
   );
 }
