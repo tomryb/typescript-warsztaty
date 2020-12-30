@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ButtonZadanie3 from './ButtonZadanie3';
+import Zadanie3Button from './Zadanie3Button';
 
 type CounterState = {
   count: number
@@ -15,7 +15,7 @@ export enum ButtonText {
   Reset = 'reset'
 }
 
-export default class CounterZadanie3 extends Component<CounterProps, CounterState> {
+export default class Zadanie3Counter extends Component<CounterProps, CounterState> {
   state: CounterState = {
     count: 0,
   }
@@ -41,9 +41,9 @@ export default class CounterZadanie3 extends Component<CounterProps, CounterStat
         <div>
           Counter: {this.state.count}
         </div>
-        <ButtonZadanie3 text={ButtonText.Increment} handleClick={this.handleIncrement} />
-        <ButtonZadanie3 text={ButtonText.Decrement} handleClick={this.handleDecrement} />
-        <ButtonZadanie3 text={ButtonText.Reset} handleClick={this.handleReset} />
+        <Zadanie3Button text={ButtonText.Increment} handleClick={this.handleIncrement} />
+        <Zadanie3Button text={ButtonText.Decrement} handleClick={this.handleDecrement} />
+        <Zadanie3Button text={ButtonText.Reset} handleClick={this.handleReset} />
       </div>
     )
   }

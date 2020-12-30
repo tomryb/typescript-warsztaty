@@ -1,6 +1,6 @@
 import React, { useReducer, FC } from 'react'
-import ButtonZadanie3 from './ButtonZadanie3'
-import { ButtonText } from './CounterZadanie3'
+import Zadanie3Button from './Zadanie3Button'
+import { ButtonText } from './Zadanie3Counter'
 
 type Counter2Props = {
   title: string
@@ -10,7 +10,7 @@ type InitialState = {
   count: number;
 }
 
-enum CounterActionType {
+export enum CounterActionType {
   INCREMENT = 'INCREMENT',
   DECREMENT = 'DECREMENT',
   RESET = 'RESET',
@@ -39,17 +39,19 @@ function counterReducer(state: InitialState, action: CounterAction) {
   }
 }
 
-const Counter2Zadanie5: FC<Counter2Props> = ({ title }: Counter2Props) => {
+const Zadanie5Counter2: FC<Counter2Props> = ({ title }: Counter2Props) => {
   const [state, dispatch] = useReducer(counterReducer, initialState);
   return (
     <div>
       <h2>{title}</h2>
       <div>
         Counter: {state.count}
-        <ButtonZadanie3 text={ButtonText.Increment} handleClick={() => dispatch({ type: CounterActionType.INCREMENT })} />
+        <Zadanie3Button text={ButtonText.Increment} handleClick={() => dispatch({ type: CounterActionType.INCREMENT })} />
+        <Zadanie3Button text={ButtonText.Decrement} handleClick={() => dispatch({ type: CounterActionType.DECREMENT })} />
+        <Zadanie3Button text={ButtonText.Reset} handleClick={() => dispatch({ type: CounterActionType.RESET })} />
       </div>
     </div>
   )
 }
 
-export default Counter2Zadanie5;
+export default Zadanie5Counter2;

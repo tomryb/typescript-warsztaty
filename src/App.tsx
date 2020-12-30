@@ -1,9 +1,11 @@
 import React from 'react';
-import Counter2Zadanie4 from './components/Counter2Zadanie4';
-import Counter2Zadanie5 from './components/Counter2Zadanie5';
-import CounterZadanie3 from './components/CounterZadanie3';
-import Header from './components/HeaderZadanie2';
-import PostListZadanie4 from './components/PostListZadanie4';
+import Zadanie4Counter2 from './components/Zadanie4Counter2';
+import Zadanie5Counter2 from './components/Zadanie5Counter2';
+import Zadanie3Counter from './components/Zadanie3Counter';
+import Header from './components/Zadanie2Header';
+import Zadanie4PostList from './components/Zadanie4PostList';
+import Zadanie5PostList from './components/Zadanie5PostList.component';
+import Zadanie6Counter2 from './components/Zadanie6Form.component';
 
 function App() {
   // const add = (a: number, b: number) => a + b //1 przykład
@@ -21,13 +23,13 @@ function App() {
 
   const TEXTS = {
     HEADER: {
-        TITLE: 'Application Header',
-        SUBTITLE: 'Application Subheader',
+      TITLE: 'Application Header',
+      SUBTITLE: 'Application Subheader',
     },
     COUNTER: {
-        TITLE: 'Counter Section'
+      TITLE: 'Counter Section'
     }
-};
+  };
 
   return (
     <div className="App">
@@ -39,16 +41,22 @@ function App() {
       <Header title={TEXTS.HEADER.TITLE} subtitle={TEXTS.HEADER.SUBTITLE} />
 
       {/* przykład3 */}
-      <CounterZadanie3 title={TEXTS.COUNTER.TITLE}/>
+      <Zadanie3Counter title={TEXTS.COUNTER.TITLE} />
 
       {/* zadanie4 */}
 
-      <Counter2Zadanie4 title={"elo"}/>
-      <PostListZadanie4/>
+      <Zadanie4Counter2 title={"elo"} />
+      <Zadanie4PostList />
 
       {/* zadanie5 */}
 
-      <Counter2Zadanie5 title={'elo ponownie'}/>
+      <Zadanie5Counter2 title={'elo ponownie'} />
+      <Zadanie5PostList />
+
+      {/* zadanie6 */}
+
+      <Zadanie6Counter2 title={'Uszanowanko. Podaj wartość'}></Zadanie6Counter2>
+
     </div>
   );
 }
