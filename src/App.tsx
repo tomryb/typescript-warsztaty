@@ -12,7 +12,6 @@ function App() {
   // zadanie 1 extra
   const add2 = (...rest: number[]) => {
 
-
     let result: number = 0;
     rest.map((element: number) => {
       result += element
@@ -20,12 +19,16 @@ function App() {
     return result
   }
 
-  // zadanie3
-  const COUNTERPROPS = {
+  const TEXTS = {
+    HEADER: {
+        TITLE: 'Application Header',
+        SUBTITLE: 'Application Subheader',
+    },
     COUNTER: {
-      TITLE: 'Counter Section',
+        TITLE: 'Counter Section'
     }
-  }
+};
+
   return (
     <div className="App">
       {/* zadanie1 */}
@@ -33,10 +36,10 @@ function App() {
       <p>{add2(5, 5, 5)}</p>
 
       {/* zadanie2 */}
-      <Header title={"Tytuł"} subtitle={"Podtytuł"} />
+      <Header title={TEXTS.HEADER.TITLE} subtitle={TEXTS.HEADER.SUBTITLE} />
 
       {/* przykład3 */}
-      <CounterZadanie3 title={COUNTERPROPS.COUNTER.TITLE}/>
+      <CounterZadanie3 title={TEXTS.COUNTER.TITLE}/>
 
       {/* zadanie4 */}
 
